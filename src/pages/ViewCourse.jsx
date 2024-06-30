@@ -34,7 +34,7 @@ const ViewCourse = () => {
                 <Outlet/>
             </div>
         </div>
-        {reviewModal && <CourseReviewModal setReviewModal={setReviewModal}/>}
+        {/* {reviewModal && <CourseReviewModal setReviewModal={setReviewModal}/>} */}
     </>
   )
 }
