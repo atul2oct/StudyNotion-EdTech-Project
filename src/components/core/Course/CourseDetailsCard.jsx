@@ -1,6 +1,8 @@
 import copy from 'copy-to-clipboard';
 import React from 'react'
 import toast from 'react-hot-toast';
+import { BsFillCaretRightFill } from "react-icons/bs"
+import { FaShareSquare } from "react-icons/fa"
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { ACCOUNT_TYPE } from '../../../utils/constants';
@@ -45,55 +47,67 @@ const CourseDetailsCard = ({course, setConfirmationModal, handleBuyCourse}) => {
     toast.success("Link Copied to Clipboard")
   }
   return (
+    <>
+      <div className='flex flex-col gap-4 rounded-md bg-richblack-700 p-4 text-richblack-5'>
 
-    <div className='bg-richblack-600'>
+        {/* course image */}
+        <img src={ThumbnailImage} alt={course?.courseName} className='max-h-[300px] min-h-[180px] w-[400px] overflow-hidden rounded-2xl object-cover md:max-w-full'/>
 
-      <img src={ThumbnailImage} alt=' Thumbnail Image' className='max-h-[300px] min-h-[180px] w-[400px] rounded-xl'/>
-      
-      <div>
-        Rs. {CurrentPrice}
-      </div>
+        <div className='px-4'>
+        
+          <div className='space-x-3 pb-4 text-3xl font-semibold'>
+            Rs. {CurrentPrice}
+          </div>
 
-      <div className='flex flex-col gap-y-6 px-6'>
-        <button onClick = { user && course?.studentsEnrolled.includes(user?._id) ? () => navigate('/dashboard/enrolled-courses') : handleBuyCourse } className='bg-yellow-50 text-richblack-900 '>
-          {
-            user && course?.studentsEnrolled.includes(user?._id) ? "Go to Course" : "Buy Now"
-          }
-        </button>
+          <div className='flex flex-col gap-4'>
+            <button className='bg-yellow-50 text-richblack-900 Button'
+              onClick = { user && course?.studentsEnrolled.includes(user?._id) ? () => navigate('/dashboard/enrolled-courses') : handleBuyCourse }
+            >
+              {
+                user && course?.studentsEnrolled.includes(user?._id) ? "Go to Course" : "Buy Now"
+              }
+            </button>
 
-        {
-          !course?.studentsEnrolled.includes(user?._id) && <button onClick={handleAddToCart} className='bg-richblack-900 '>Add to Cart</button>
-        }
-      </div>
+            {
+              (!user || !course?.studentsEnrolled.includes(user?._id)) && (<button onClick={handleAddToCart} className='bg-richblack-900 text-richblack-5 Button'>Add to Cart</button>)
+            }
+          </div>
 
-      <div>
+          <div>
+            <p className='pb-3 pt-6 text-center text-richblack-25'>
+                30-Day Money-Back Guarantee
+            </p>
+          </div>
 
-        <p>
-            30-Day Money-Back Guarantee
-        </p>
-        <p>
-            This Course Includes:
-        </p>
+          <div>
+            <p className='my-2 text-xl font-semibold'>
+                This Course Includes:
+            </p>
 
-        <div className='flex flex-col gap-y-3'>
-          {
-            course?.instructions?.map((item,index)=>(
-              <p key={index}>
-                <span>{item}</span>
-              </p>
-            ))
-          }
+            <div className='flex flex-col gap-3 text-sm text-caribbeangreen-100'>
+              {
+                course?.instructions?.map((item,index)=>(
+                  <p className='flex gap-2 items-center' key={index}>
+                    <BsFillCaretRightFill/>
+                    <span>{item}</span>
+                  </p>
+                ))
+              }
+            </div>
+
+          </div>
+
+          <div className='text-center'>
+            <button onClick={handleShare} className='mx-auto flex items-center gap-3 py-6 text-yellow-100'>
+              <FaShareSquare size={15}/> Share
+            </button>
+          </div>
         </div>
 
       </div>
+    </>
 
-      <div>
-        <button onClick={handleShare} className='mx-auto flex items-center gap-3 p-6 text-yellow-50'>
-          Share
-        </button>
-      </div>
-
-    </div>
+    
 
   )
 }

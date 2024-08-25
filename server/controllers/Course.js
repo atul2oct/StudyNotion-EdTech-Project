@@ -303,20 +303,24 @@ exports.editCourse = async (req, res) => {
 	}
 }
 
-// get all courses handelr fuinction
+// get all courses handler fuinction
 exports.showAllCourse = async (req,res) => {
     try{
         // fetch data
-        // TODO change the below code
-        const allCourse = await Course.find({})
-        // const allCourse = await Course.find({},{courseName:true,
-        //                                         price:true,
-        //                                         thumbnail:true,
-        //                                         instructor:true,
-        //                                         ratingAndReviews:true,
-        //                                         studentsEnrolled:true,})
-        //                                         .populate("instructor")
-        //                                         .exec()
+        const allCourse = await Course.find(
+			{ status: "Published"},
+			{
+				courseName:true,
+				price:true,
+				thumbnail:true,
+				instructor:true,
+				ratingAndReviews:true,
+				studentsEnrolled:true,
+			}
+		)
+		.populate("instructor")
+		.exec()
+		
         return res.status(200).json({
             success:true,
             data:allCourse,

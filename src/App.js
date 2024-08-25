@@ -26,6 +26,7 @@ import EditCourse from './components/core/Dashboard/EditCourse'
 import Catalog from './pages/Catalog'
 import CourseDetails from './pages/CourseDetails'
 import ViewCourse from './pages/ViewCourse'
+import VideoDetails from './components/core/ViewCourse/VideoDetails'
 
 const App = () => {
   const { user } = useSelector((state) => state.profile)
@@ -82,7 +83,7 @@ const App = () => {
           {
             user?.accountType === ACCOUNT_TYPE.STUDENT && (
               <>
-                {/* <Route path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId" element={<VideoDetails/>}/> */}
+                <Route path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId" element={<VideoDetails/>}/>
               </>
             )
           }

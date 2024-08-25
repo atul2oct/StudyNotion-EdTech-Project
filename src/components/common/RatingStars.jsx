@@ -10,7 +10,7 @@ const RatingStars = ({ Review_Count, Star_Size }) => {
     full: 0,
     half: 0,
     empty: 0,
-  })
+  });
 
   useEffect(()=>{
     const wholeStars = Math.floor(Review_Count) || 0
@@ -20,7 +20,7 @@ const RatingStars = ({ Review_Count, Star_Size }) => {
       empty: Number.isInteger(Review_Count) ? 5 - wholeStars : 4 - wholeStars,
     })
 
-  },[Review_Count])
+  },[Review_Count]);
   return (
     <div className="flex gap-1 text-yellow-100">
       {[...new Array(starCount.full)].map((_,i) => (

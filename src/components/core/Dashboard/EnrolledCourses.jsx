@@ -1,29 +1,36 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getUserEnrolledCourses } from '../../../services/operations/profileAPI'
 import ProgressBar from '@ramonak/react-progress-bar'
 import { useNavigate } from 'react-router-dom'
+import { logout } from '../../../services/operations/authAPI'
+
 
 const EnrolledCourses = () => {
 
-    const {token} = useSelector(state=>state.auth)
-    const navigate = useNavigate()
+    const {token} = useSelector(state=>state.auth);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const [enrolledCourses,setEnrolledCourses] = useState(null)
+    const [enrolledCourses,setEnrolledCourses] = useState(null);
 
     const getEnrolledCourses = async () => {
         try{
-            const response = await getUserEnrolledCourses(token)
-            setEnrolledCourses(response)
-            console.log("Enrolled Courses Response: ",response)
+            const response = await getUserEnrolledCourses(token,navigate)
+            setEnrolledCourses(response);
+
+            if (response.response && response.response.data.message === "token is invaild") {
+                dispatch(logout(navigate))
+            }
+            // console.log("Enrolled Courses Response: ",response)
         }catch(error){
             console.log("Unable to fetch Enrolled Courses error: ",error);
         }
     }
 
     useEffect(()=>{
-        getEnrolledCourses()
-    }, [])
+        getEnrolledCourses();
+    }, []);
   return (
     <div className='mx-auto w-11/12 max-w-[1000px] py-10'>
         <div className='text-3xl text-richblack-50'>Enrolled Courses</div>

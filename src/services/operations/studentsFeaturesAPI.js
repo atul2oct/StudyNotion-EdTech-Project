@@ -6,7 +6,6 @@ import { setPaymentLoading } from "../../slices/courseSlice";
 import { resetCart } from "../../slices/cartSlice";
 
 const RAZORPAY_KEY = process.env.REACT_APP_RAZORPAY_KEY
-console.log("RAZORPAY_KEY: ",RAZORPAY_KEY)
 const {COURSE_PAYMENT_API, COURSE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API} = studentEndpoints
 
 function loadScript(src){

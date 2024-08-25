@@ -6,6 +6,7 @@ const { courseEnrollmentEmail } = require('../mail/templates/courseEnrollmentEma
 const { default: mongoose } = require("mongoose");
 const { paymentSuccessEmail } = require('../mail/templates/paymentSuccessEmail')
 const crypto = require("crypto");
+const CourseProgress = require('../models/CourseProgress')
 
 // initiate the Razorpay order
 exports.capturePayment = async (req,res) => {
@@ -78,16 +79,11 @@ exports.capturePayment = async (req,res) => {
 
 // verify signature of razorpay and server
 exports.verifySignature = async (req,res) => {
-
-    console.log("1")
-    
     const razorpay_order_id = req.body?.razorpay_order_id;
     const razorpay_payment_id = req.body?.razorpay_payment_id;
     const razorpay_signature = req.body?.razorpay_signature;
     const courses = req.body?.courses;
     const userId = req.user.id;
-
-    console.log("2")
     
     if(!razorpay_order_id || !razorpay_payment_id || !razorpay_signature || !courses || !userId){
         return res.status(404).json({
@@ -95,20 +91,17 @@ exports.verifySignature = async (req,res) => {
             message:"Payment Failed"
         })
     }
-    console.log("3")
     
     let body = razorpay_order_id + '|' + razorpay_payment_id;
-    console.log("4")
+
     const expectedSignature = crypto
         .createHmac("sha256",process.env.RAZORPAY_SECRET)
         .update(body.toString())
         .digest('hex')
-        console.log("5")
+
         if(expectedSignature === razorpay_signature){
-            console.log("6")            
             // enroll karawo student ko
             await enrolledStudent(courses,userId, res)
-            console.log("7")
             // return res
             return res.status(200).json({
                 success:true,
@@ -116,7 +109,7 @@ exports.verifySignature = async (req,res) => {
             })
 
         }
-        console.log("8")
+        
         return res.status(400).json({
             success:false,
             message:"Payment failed"
@@ -148,9 +141,19 @@ const enrolledStudent = async(courses, userId, res) => {
                     })
                 }
 
+                const courseProgress = await CourseProgress.create({
+                    courseId:courseId,
+                    userId:userId,
+                    completedVideos: [],
+                })
+
                 // find the student and add the course to their list of enrolledCourses
                 const enrolledStudent = await User.findByIdAndUpdate(userId,
-                    {$push:{courses:courseId}},
+                    {$push:{
+                        courses:courseId,
+                        courseProgress:courseProgress._id,
+
+                    }},
                     {new:true}
                 )
 

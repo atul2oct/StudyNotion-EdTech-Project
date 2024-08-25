@@ -79,6 +79,16 @@ exports.categoryPageDetails = async (req,res) => {
                 message:"Category not found"
             })
         }
+
+        // Handle the case when there are no courses
+        if (selectedCategory.courses.length === 0) {
+            console.log("No courses found for the selected category.")
+            return res.status(404).json({
+            success: false,
+            message: "No courses found for the selected category.",
+            })
+        }
+
         // get courses for different categories
         const categoriesExceptSelected = await Category.find({
             _id: {$ne: categoryId},//not equal to this id
@@ -92,6 +102,7 @@ exports.categoryPageDetails = async (req,res) => {
             match: {status: "Published"},
         })
         .exec()
+
         // Get top-selling courses across all categories
         const allCategories = await Category.find()
         .populate({
@@ -105,8 +116,9 @@ exports.categoryPageDetails = async (req,res) => {
 
         const allCourses = allCategories.flatMap((category)=>category.courses)
         const mostSellingCourses = allCourses
-        .sort((a, b) => b.sold - a.sold)
-        .slice(0, 10)
+            .sort((a, b) => b.sold - a.sold)
+            .slice(0, 10)
+        
         return res.status(200).json({
             success:true,
             data:{
