@@ -76,7 +76,7 @@ const CourseDetails = () => {
 
     const handleActive = (id) => {
         setIsActive(
-            !isActive.includes(id) ? isActive.concat([id]) : isActive.filter((e)=>e != id)
+            !isActive.includes(id) ? isActive.concat([id]) : isActive.filter((e)=>e !== id)
         );
     };
 

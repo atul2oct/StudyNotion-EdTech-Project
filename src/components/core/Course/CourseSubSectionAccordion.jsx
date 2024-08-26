@@ -2,6 +2,7 @@ import React from 'react'
 import { HiOutlineVideoCamera } from "react-icons/hi"
 
 const CourseSubSectionAccordion = ({subSec}) => {
+  console.log("subSec",subSec)
   return (
     <div>
         <div className='flex justify-between py-2'>
