@@ -17,7 +17,6 @@ exports.createCategory = async(req,res) => {
         }
         // create entry in DB
         const CategoryDetails = await Category.create({name,descritption})
-        console.log(CategoryDetails)
 
         // return response
         return res.status(200).json({
@@ -43,7 +42,6 @@ exports.showAllCategory = async(req,res) => {
         //     {name:true,descritption:true}
         // )
         const allCategory = await Category.find({})
-        console.log(allCategory)
 
         // return response
         return res.status(200).json({

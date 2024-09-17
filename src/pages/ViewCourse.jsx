@@ -11,7 +11,6 @@ const ViewCourse = () => {
     const [reviewModal, setReviewModal] = useState(false);
 
     const {courseId} = useParams();
-    console.log("courseId from params",courseId)
     const {token} = useSelector(state=>state.auth);
     const dispatch = useDispatch();
 

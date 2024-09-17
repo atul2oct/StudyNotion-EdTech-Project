@@ -36,7 +36,7 @@ exports.updateCourseProgress = async(req,res) => {
                 });
             }
 
-            //poush into completed video
+            //push into completed video
             courseProgress.completedVideos.push(subSectionId);
             console.log("Copurse Progress Push Done");
         }

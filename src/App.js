@@ -27,6 +27,7 @@ import Catalog from './pages/Catalog'
 import CourseDetails from './pages/CourseDetails'
 import ViewCourse from './pages/ViewCourse'
 import VideoDetails from './components/core/ViewCourse/VideoDetails'
+import Instructor from './components/core/Dashboard/InstructorDashboard/Instructor'
 
 const App = () => {
   const { user } = useSelector((state) => state.profile)
@@ -41,6 +42,7 @@ const App = () => {
         <Route path='/catalog/:catalogName' element={<Catalog/>}/>
         <Route path='/courses/:courseId' element={<CourseDetails/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path="/about" element={<About/>} />
         <Route path='*' element={<Error/>}/>
         {/* Open Route - for Only Non Logged in User */}
         <Route path='/login' 
@@ -71,6 +73,7 @@ const App = () => {
           {/* Route only for Instructors */}
           {
             user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (<>
+              <Route path="dashboard/instructor" element={<Instructor/>} />
               <Route path="dashboard/my-courses" element={<MyCourses/>} />
               <Route path="dashboard/add-course" element={<AddCourse/>} />
               <Route path="dashboard/edit-course/:courseId" element={<EditCourse/>} />

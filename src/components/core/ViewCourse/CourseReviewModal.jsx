@@ -10,9 +10,6 @@ const CourseReviewModal = ({setReviewModal}) => {
     const {user} = useSelector(state=>state.profile);
     const {token} = useSelector(state=>state.auth);
     const {courseEntireData} = useSelector(state=>state.viewCourse);
-    console.log("user",user);
-    console.log("courseEntireData",courseEntireData)
-
 
     const {
         register,
@@ -63,7 +60,7 @@ const CourseReviewModal = ({setReviewModal}) => {
                     </div>
                 </div>
 
-                <form onSubmit={()=>onSubmit(handleSubmit)} className='mt-6 flex flex-col items-center'>
+                <form onSubmit={handleSubmit(onSubmit)} className='mt-6 flex flex-col items-center'>
 
                     <ReactStars
                         count={5}

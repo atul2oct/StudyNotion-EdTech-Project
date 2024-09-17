@@ -17,20 +17,22 @@ const EnrolledCourses = () => {
     const getEnrolledCourses = async () => {
         try{
             const response = await getUserEnrolledCourses(token,navigate)
+            // Filtering the published course out
+            // const filterPublishCourse = res.filter((ele) => ele.status !== "Draft")
             setEnrolledCourses(response);
 
             if (response.response && response.response.data.message === "token is invaild") {
                 dispatch(logout(navigate))
             }
-            // console.log("Enrolled Courses Response: ",response)
         }catch(error){
             console.log("Unable to fetch Enrolled Courses error: ",error);
         }
     }
-
+    
     useEffect(()=>{
         getEnrolledCourses();
     }, []);
+    
   return (
     <div className='mx-auto w-11/12 max-w-[1000px] py-10'>
         <div className='text-3xl text-richblack-50'>Enrolled Courses</div>

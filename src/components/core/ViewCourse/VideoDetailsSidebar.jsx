@@ -7,6 +7,8 @@ import IconBtn from '../../common/IconBtn';
 
 const VideoDetailsSidebar = ({setReviewModal}) => {
 
+ 
+
   const [activeStatus, setActiveStatus] = useState("");
   const [videoBarActive, setVideoBarActive] = useState("");
   const navigate = useNavigate();
@@ -17,10 +19,8 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
     courseSectionData,
     courseEntireData,
     completedLectures,
-    totalNoOfLectures
+    totalNoOfLectures,
   } = useSelector(state=> state.viewCourse);
-
-  console.log('courseSectionData',courseSectionData,    'courseEntireData',courseEntireData,    'completedLectures',completedLectures,    'totalNoOfLectures',totalNoOfLectures);
 
   useEffect(()=>{
     // iife with semicolon is safer in scenarios where you want to avoid issues with ASI.

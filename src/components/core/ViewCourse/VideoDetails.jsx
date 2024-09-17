@@ -18,7 +18,6 @@ const VideoDetails = () => {
   const {courseSectionData, courseEntireData, completedLectures, totalNoOfLectures} = useSelector(state => state.viewCourse);
 
   const [videoData, setVideoData] = useState([]);
-  console.log("videoData",videoData)
   const [previewSource, setPreviewSource] = useState("")
   const [videoEnded, setVideoEnded] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -32,7 +31,6 @@ const VideoDetails = () => {
         navigate("dashboard/enrolled-courses");
       }else{
         // let's assume that all 3 fields are present
-        console.log("courseSectionData",courseSectionData)
         const filteredData = courseSectionData.filter((course) => course._id === sectionId);
         const filteredVideoData = filteredData?.[0].subSection.filter((data) => data._id === subSectionId);
         setVideoData(filteredVideoData[0]);
@@ -69,7 +67,6 @@ const VideoDetails = () => {
     const currentSectionIndex = courseSectionData.findIndex((data) => data._id === sectionId);
     const noOfSubSections =  courseSectionData[currentSectionIndex].subSection.length;
     const currentSubSectionIndex = courseSectionData[currentSectionIndex].subSection.findIndex((data) => data._id === subSectionId);
-    console.log("sub section",courseSectionData[currentSectionIndex].subSection)
 
     if(currentSectionIndex !== noOfSubSections - 1){
       // same section k ander video hai. go to next video in same section
@@ -91,13 +88,11 @@ const VideoDetails = () => {
     const currentSubSectionIndex = courseSectionData[currentSectionIndex].subSection.findIndex((data) => data._id === subSectionId);
 
     if(currentSubSectionIndex !== 0){
-      console.log("case1")
       // same section k ander video hai. go to previous video in same section
       const previousSubSectionId = courseSectionData[currentSectionIndex].subSection[currentSubSectionIndex - 1];
       // iss video prr jao
       navigate(`/view-course/${courseId}/section/${sectionId}/sub-section/${previousSubSectionId}`);
     }else{
-      console.log("case2")
       // same section me video ab previous nhi hai toh previous section me jao.Last Video in different section
       const previousSectionId = courseSectionData[currentSectionIndex - 1]._id;
       const noOfPrevSubSections =  courseSectionData[currentSectionIndex - 1].subSection.length;
@@ -116,7 +111,7 @@ const VideoDetails = () => {
     }
     setLoading(false);
   };
-
+console.log("playerRef?.current",playerRef?.current)
   return (
     <div className="flex flex-col gap-5 text-white">
       {
@@ -157,6 +152,8 @@ const VideoDetails = () => {
                   if(playerRef?.current){
                     // set the current time of the video to 0
                     playerRef?.current?.seek(0);
+                    // Replay the video by calling the play method
+                    playerRef?.current?.play();
                     setVideoEnded(false);
                   }
                 }}

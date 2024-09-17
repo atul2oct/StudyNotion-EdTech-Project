@@ -9,35 +9,41 @@ exports.createRating = async (req,res) => {
         const userId = req.user.id
         // fetch data from req body
         const {rating,review,courseId} = req.body
+
         // check if user enrolled or not
         const courseDetails = await Course.findOne(
             {   _id:courseId,
                 studentsEnrolled: {$elemMatch: {$eq: userId}},//studentsEnrolled == userId wo wla course dedo
             }
         )
+
         if(!courseDetails){
             return res.status(404).json({
                 success:false,
                 message:"Student is not enrolled in course"
             })
         }
+
         // check if user is already reviewed the course
         const alreadyReviewed = await RatingAndReview.findOne({
             user:userId,
             course:courseId,
         })
+
         if(alreadyReviewed){
             return res.status(403).json({
                 success:false,
                 message:"Course is already reviewed by the user"
             })
         }
+
         // create rating and review
         const ratingReview = await RatingAndReview.create({
             rating,review,
             course:courseId,
             user:userId
         })
+        
         // update the course with rating and review
         const UpdatedCourse = await Course.findByIdAndUpdate({_id:courseId},
             {
@@ -46,7 +52,8 @@ exports.createRating = async (req,res) => {
                 }
             },
             {new:true}
-            )
+        )
+            
         // return response
         return res.status(200).json({
             success:true,
