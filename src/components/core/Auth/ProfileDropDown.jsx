@@ -7,15 +7,20 @@ import { logout } from '../../../services/operations/authAPI'
 import useOnClickOutside from '../../../hooks/useOnClickOutside'
 
 const ProfileDropDown = () => {
-  const { user } = useSelector((state)=>state.profile)
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const { user } = useSelector((state)=>state.profile);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   
-  const [open,setOpen] = useState(false)
+  const [open,setOpen] = useState(false);
 
-  const ref = useRef()
+  const ref = useRef();
 
-  useOnClickOutside(ref,()=>setOpen(false))
+  useOnClickOutside(ref,()=>setOpen(false));
+// --------------
+  // if (!user){
+  //   console.log("no user");
+  //   return localStorage.setItem("token",null);
+  // } 
 
   return (
     <button className='relative' onClick={()=>setOpen(!open)}>

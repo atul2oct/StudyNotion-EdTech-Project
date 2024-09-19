@@ -94,7 +94,7 @@ const {
                 throw new Error(response.data.message)
             }
             toast.success('Login Successfully')
-            console.log("response",response.data)
+            console.log("response",response)
             dispatch(setToken(response.data.token))
             const userImage = response.data?.user?.image ? response.data.user.image
             : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`

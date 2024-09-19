@@ -10,20 +10,16 @@ const EnrolledCourses = () => {
 
     const {token} = useSelector(state=>state.auth);
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     const [enrolledCourses,setEnrolledCourses] = useState(null);
 
     const getEnrolledCourses = async () => {
         try{
-            const response = await getUserEnrolledCourses(token,navigate)
+            const response = await getUserEnrolledCourses(token)
             // Filtering the published course out
-            // const filterPublishCourse = res.filter((ele) => ele.status !== "Draft")
-            setEnrolledCourses(response);
+            const filterPublishCourse = response.filter((ele) => ele.status !== "Draft")
+            setEnrolledCourses(filterPublishCourse);
 
-            if (response.response && response.response.data.message === "token is invaild") {
-                dispatch(logout(navigate))
-            }
         }catch(error){
             console.log("Unable to fetch Enrolled Courses error: ",error);
         }
