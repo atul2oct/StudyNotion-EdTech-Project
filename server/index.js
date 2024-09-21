@@ -26,7 +26,7 @@ app.use(cookieParser())
 
 app.use(
     cors({//deep dive why credentials:true ?
-        origin: "*",
+        origin: "study-notion-ed-tech-project-rosy.vercel.app",
         credentials:true,            //access-control-allow-credentials:true
     })
 )
