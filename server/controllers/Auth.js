@@ -194,7 +194,7 @@ exports.login = async (req,res) => {
                 accountType:user.accountType,
             }
             const token = jwt.sign(payload, process.env.JWT_SECRET, {
-                expiresIn:"24h",
+                expiresIn:"72h",
             })
             // Save token to user document in database
             user.token = token
@@ -202,7 +202,7 @@ exports.login = async (req,res) => {
             // Set cookie for token and return success response
             const options = {
                 expires: new Date(Date.now() + 3* 24 * 60 * 60 * 1000),
-                httpOnly:true,
+                httpOnly:true, // Cookie is accessible only by the server (not by JavaScript)
             }
             res.cookie("token",token,options).status(200).json({
                 success:true,
