@@ -26,7 +26,7 @@ app.use(cookieParser())
 
 app.use(
     cors({//deep dive why credentials:true ?
-        origin: "http://localhost:3000",
+        origin: "*",
         credentials:true,            //access-control-allow-credentials:true
     })
 )
