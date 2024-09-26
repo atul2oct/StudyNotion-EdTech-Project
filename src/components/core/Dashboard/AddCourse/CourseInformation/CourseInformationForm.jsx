@@ -280,12 +280,12 @@ const CourseInformationForm = () => {
         />
 
         {/* Next Button */}
-        <div>
+        <div className='flex gap-4'>
             {
                 editCourse && (
                     <button
                         onClick={()=>dispatch(setStep(2))}
-                        className='bg-richblack-300'
+                        className='bg-richblack-300 order-2 border border-richblack-500 cursor-pointer rounded-md py-2 px-5 font-semibold text-richblack-900'
                     >
                         Continue without Saving
                     </button>

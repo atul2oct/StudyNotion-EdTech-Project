@@ -42,9 +42,6 @@ The platform is built using the **MERN stack**, which includes ReactJS, NodeJS, 
 <hr/>
 
 
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/home1.png' />
-
-
 
 ## Table of Contents
 
@@ -211,9 +208,8 @@ Utilized several React hooks for efficient state management and dynamic behavior
 
 ##  🖥️ Screen Preview :
 
-# Random Home Page Background 🏠 
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/home3.png' />
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/home4.png' />
+# Home Page Background 🏠 
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/home.png' />
 
 # About Page
 <img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/about.png' />
@@ -222,63 +218,46 @@ Utilized several React hooks for efficient state management and dynamic behavior
 <img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/contact.png' />
 
 # Forgot passwornd
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/forgot%20pass.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/forgot-password.png' />
 
-# Dashboard
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/dashboard.png' />
-
-# Edit Profile
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/edit%20profile.png' />
-
+# Student Dashboard
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/student-dashboard.png' />
 
 # Add Course
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/add%20course.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/add-course.png' />
 
 # Edit Course
 <img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/edit%20course.png' />
 
 # Course Details 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/course%20details1.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/course-details-page.png' />
 
-# Course Details 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/course%20details2.png' />
+# Catalog of Course
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/catalog.png' />
 
 # Add Review
 <img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/add%20review.png' />
 
-# Cart1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/cart1.png' />
+# Cart
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/cart-page.png' />
 
+# Enrolled Courses
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/enrolled-courses.png' />
 
-
-
-# Enrolled Courses 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/enrolled%20courses1.png' />
-
-# Enrolled Courses 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/enrolled%20courses2.png' />
-
-# Instructor Data 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/instrctor%20data1.png' />
-
-# Instructor Data 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/instrctor%20data2.png' />
+# Instructor Data
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Instructor-Dashboard.png' />
 
 # My Courses 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/myCourses1.png' />
-
-# My Courses 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/myCourses2.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/my-courses.png' />
 
 # View Courses 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/view%20course1.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/video-player-1.png' />
 
 # View Courses 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/view%20course2.png' />
-
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/video-player-2.png' />
 
 # Delete Account
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/delete%20account.png' />
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/delete.png' />
 
 # Footer
 <img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/footer.png' />
