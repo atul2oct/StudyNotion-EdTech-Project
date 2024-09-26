@@ -24,12 +24,23 @@ database.connect()
 app.use(express.json())
 app.use(cookieParser())
 
+const allowedOrigins = [
+    "https://study-notion-ed-tech-project-rosy.vercel.app",
+    "https://study-notion-ed-tech-project-9aaemlo9o-atuls-projects-ec02cbcd.vercel.app",
+];
+
 app.use(
-    cors({//deep dive why credentials:true ?
-        origin: "study-notion-ed-tech-project-rosy.vercel.app",
-        credentials:true,            //access-control-allow-credentials:true
+    cors({
+        origin: function (origin, callback) {
+            if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+                callback(null, origin); // Allow the request
+            } else {
+                callback(new Error('Not allowed by CORS')); // Reject the request
+            }
+        },
+        credentials: true,
     })
-)
+);
 
 app.use(
     fileupload({
