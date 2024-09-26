@@ -51,7 +51,7 @@ const InstructorChart = ({courses}) => {
         <button onClick={()=>setCurrChart("students")} className={`rounded-sm p-1 px-3 transition-all duration-200 ${currChart === "students" ? "bg-richblack-700 text-yellow-50" : "text-yellow-400"}`}>Student</button>
         <button onClick={()=>setCurrChart("income")} className={`rounded-sm p-1 px-3 transition-all duration-200 ${currChart === "income" ? "bg-richblack-700 text-yellow-50" : "text-yellow-400"}`}>Income</button>
       </div>
-      <div className='h-full w-full aspect-square mx-auto relative'>
+      <div className='h-full w-full mx-auto relative'>
       {/* Render the Pie chart based on the selected chart */}
         <Pie
           data = {currChart === "students" ? chartDataForStudents : chartDataForIncome}
