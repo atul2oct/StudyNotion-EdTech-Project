@@ -69,29 +69,29 @@ The platform is built using the **MERN stack**, which includes ReactJS, NodeJS, 
 
 <br/>
 <br/>
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/gif.gif'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/gif.gif'/>
 
 
 ## Tech Stack 💻🔧 
 
 ## Frontend 🎨 : 
-<code title="React.js"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/react%20ogo.png"></code>
-<code title="Vite"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/Vitejs-logo.png"></code>
-<code title="Redux.js"><img height="35" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/redux-logo.png"></code>
-<code title="css"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/css%20logo.png"></code>
-<code title="Tailwind css"><img height="35" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/tailwind%20css%20logo.png"></code>
+<code title="React.js"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/react%20ogo.png"></code>
+<code title="Vite"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/Vitejs-logo.png"></code>
+<code title="Redux.js"><img height="35" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/redux-logo.png"></code>
+<code title="css"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/css%20logo.png"></code>
+<code title="Tailwind css"><img height="35" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/tailwind%20css%20logo.png"></code>
 
 
 ## Backend ⚙️ :
-<code title="Nodejs"><img height="50" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/nodejs-logo.png"></code>
-<code title="Express"><img height="70" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/express%20logo.png"></code>
+<code title="Nodejs"><img height="50" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/nodejs-logo.png"></code>
+<code title="Express"><img height="70" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/express%20logo.png"></code>
 
 
 ## Database 🛢️ :
-<code title="Mongodb"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/mongodb%20logo.png"></code>
+<code title="Mongodb"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/mongodb%20logo.png"></code>
 
 ## Cloudinary Integration ☁️
-<code title="Mongodb"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Tech%20stack%20logo/cloudinary-logo.jpg"></code>
+<code title="Mongodb"><img height="40" src="https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Tech%20stack%20logo/cloudinary-logo.jpg"></code>
 
 <hr/>
 
@@ -117,7 +117,7 @@ The database for the platform is built using MongoDB, which is a NoSQL database 
 ## Architecture Diagram 🏗️
 <br/>
 Here is a high-level diagram that illustrates the architecture of the StudyNotion ed-tech platform:
-<img width='60%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Architecture%20Diagram.png'/>
+<img width='60%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Architecture%20Diagram.png'/>
 
 
 <hr/>
@@ -168,7 +168,7 @@ The back-end of StudyNotion uses several data models and database schemas to man
 The database for the platform is built using MongoDB, a NoSQL database that provides a flexible and scalable data storage solution. MongoDB allows for the storage of unstructured and semi-structured data. The database stores the course content, user data, and other relevant information related to the platform.
 
 ## Schema 📋
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Schema.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Schema.png'/>
 
 <hr/>
 
@@ -209,58 +209,58 @@ Utilized several React hooks for efficient state management and dynamic behavior
 ##  🖥️ Screen Preview :
 
 # Home Page Background 🏠 
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/home.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/home.png'/>
 
 # About Page
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/about.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/about.png'/>
 
 # Contact Page
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/contact.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/contact.png'/>
 
 # Forgot passwornd
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/forgot-password.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/forgot-password.png'/>
 
 # Student Dashboard
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/student-dashboard.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/student-dashboard.png'/>
 
 # Add Course
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/add-course.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/add-course.png'/>
 
 # Edit Course
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/edit-course.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/edit-course.png'/>
 
 # Course Details 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/course-details-page.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/course-details-page.png'/>
 
 # Catalog of Course
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/catalog.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/catalog.png'/>
 
 # Add Review
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/add%20review.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/add%20review.png'/>
 
 # Cart
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/cart-page.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/cart-page.png'/>
 
 # Enrolled Courses
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/enrolled-courses.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/enrolled-courses.png'/>
 
 # Instructor Data
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/Instructor-Dashboard.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/Instructor-Dashboard.png'/>
 
 # My Courses 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/my-courses.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/my-courses.png'/>
 
 # View Courses 1
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/video-player-1.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/video-player-1.png'/>
 
 # View Courses 2
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/video-player-2.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/video-player-2.png'/>
 
 # Delete Account
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/delete.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/delete.png'/>
 
 # Footer
-<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/tree/main/screenshots/footer.png'/>
+<img width='100%' src='https://github.com/atul2oct/StudyNotion-EdTech-Project/blob/main/screenshots/footer.png'/>
 
 
 
